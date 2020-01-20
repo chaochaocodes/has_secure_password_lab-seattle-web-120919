@@ -1,6 +1,9 @@
-<%= form_for @user, url: login_path, method: :post  do |f| %>
+<%= form_for @user, login_path  do |f| %>
     Username: <%= f.text_field :name %>
     Password: <%= f.password_field :password %>
     <%= f.submit %>
-Or <%= link_to(controller: 'users', action: 'new') { 'sign up' } %>
+Or <%= link_to new_user_path { 'sign up' } %>
 <% end %>
+
+<%# form_for @user, url: login_path, method: :post  do |f| %>
+<%# Or <%= link_to(controller: 'users', action: 'new') { 'sign up' } %> %>
